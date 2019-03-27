@@ -1,0 +1,47 @@
+Hvorfor burde man lære jQuery?
+Det er brugt bredt og ofte i de sprog vi lærer her i gymnasiet (Sprog som: Python - Javascript).
+jQuery er ikke lige det største på jorden og man kan lære det på nogle få timer (endnu hurtigere hvis man allerede kan JavaScript).
+1. Get started, Man kan tilføje jQuery til sin hjemmeside ved at downloade deres library (jQeury.com) eller man kan bruge en CDN (content delivery network)
+Man integrer det i sin kode ved at f.eks skrive:
+(dette skriver man selvfølgelig i <head> </head> da det virker lidt som hovedet på en krop som indeholder den slags viden i guess xd)
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> (Hvis man bruger fra google eller microsoft)
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+Hvis man har downloadet det kan man bare skrive:
+<script src="jquery-3.3.1.min.js"></script> (stadig i head)
+
+Hvis du gerne vil checke om dine jQuery koder er klar til at fyre kan man skrive:
+$(document).ready(function() {
+    alert('DOM is Ready');
+});
+som kommer med en alertbox der er indbygget i browseren når den er klar, man kan tilføje det til sin kode sådan så den først gør at man 
+kan bruge de forskellige jQuery funktioner når jQuery er klar til at blive brugt.
+Hvis du gerne vil lave en knap man kan trykke på kan man skrive:
+$(document).ready(function(){
+    $("button").click(function(){
+       alert('Button is Clicked');
+    });
+});
+Den kommer med en indbygget alertbox der siger at man har klikket på knappen når man klikker på knappen, knappen virker først når jQuery er klar.
+Det er også et eksempel på at den kode der er nævnt over den anden kode der først gør ting når jQuery er klar.
+
+En selector er $(), et eksempel på det kan være at man skriver $("p") så selecter den alle <p> elementer.
+Dette kan bruges som f.eks i koden der er skrevet over, hvor at man replacer "alert('tekst'); med $("p").hide();
+.hide(); er en function der gør at elementerne forsvinder.
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+Når man klikker på knappen forsvinder alle <p> elementer.
+
+En #id selector er en havelåge "#" der vælger alle ting med en specifik id.
+Jeg vil gerne have at alle ting der hedder $("forsidebilleder");
+Så skriver vi bare ligesom før:
+$(document).ready(function(){
+  $("button").click(function(){
+    #("forsidebilleder").hide();
+  });
+});
+Man kan gøre det samme med $(".eksempel").
+Exempler på Jquery selectors (https://gyazo.com/f4734aff894ec679b1ef764c434c2e8a)
+ fortsat på et andet tidspunkt (...)
