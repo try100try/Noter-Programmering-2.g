@@ -1,0 +1,13 @@
+/*Det Handlebars prøver på er at "seperate HTML from dynamic content" så det bliver ez clappers at bruge dynamisk ting.
+For at linke til handlebars skal man cracke - <script src="handlebars-v4.0.2.js"></script> - i head, og det er self versionen.
+Eksempel på hvordan tingene funger.*/
+<body>
+<div id="derekData"></div>
+<script type="text/javascript">
+var myInfo = "<p>My name is {{name}} and I live at {{street}} in {{city}}, {{state}}</p>";
+var template = Handebars.compile(myInfo);
+var data = template({name: "Derek", street: "123main st", city: "Pittsburg", state"Pa"});
+document.getElementById("derekData").innerHTML += data;
+//Så det der vil komme ud af den her kode er den data man har givet til det template, hvor man så kan ændre dataen lige som man har lyst til.
+//Dette kode eksempel er skrevet i HTML, med hjælp af den der tingtingting der hedder Handlebars som så hjælper dataen med at finde sin rette plads.
+Yeet yeet simpel kode jeg vil gerne hjem nu.
